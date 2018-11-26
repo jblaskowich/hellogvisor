@@ -11,8 +11,8 @@ RUN CGO_ENABLED=0 GOOS=linux go build -v -o hellogvisor
 
 # Transfert the builded binary to scratch
 # in order to have the smallest footprint
-FROM scratch
-COPY --from=builder /go/src/github.com/jblaskowich/hellogvisor/hellogvisor .
+#FROM scratch
+#COPY --from=builder /go/src/github.com/jblaskowich/hellogvisor/hellogvisor .
 
 # Run the hellogvisor command when the container starts
 ENTRYPOINT ["./hellogvisor"]
