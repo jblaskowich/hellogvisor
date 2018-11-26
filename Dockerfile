@@ -2,7 +2,9 @@
 # and use it as a build environment
 FROM golang:alpine3.8 as builder
 
-WORKDIR /go/src/github.com/jblaskowich/hellogvisor/
+RUN pwd
+
+#WORKDIR /go/src/github.com/jblaskowich/hellogvisor/
 # Copy the local code to the container
 COPY . .
 
