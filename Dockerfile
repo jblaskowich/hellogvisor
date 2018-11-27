@@ -4,7 +4,7 @@ FROM golang:alpine3.8
 
 WORKDIR /go/src/github.com/jblaskowich/hellogvisor/
 # Copy the local code to the container
-COPY . .
+COPY hellogvisor.go .
 
 # build du code source
 RUN CGO_ENABLED=0 GOOS=linux go build -v -o hellogvisor
